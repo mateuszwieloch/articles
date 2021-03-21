@@ -51,7 +51,7 @@ Policies can be identity-based or resource-based.
 
 Trust policy - a policy in which you define the principal that you trust to assume a role. Every role must have trust policy attached.
 
-```json
+```jsonc
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -63,7 +63,9 @@ Trust policy - a policy in which you define the principal that you trust to assu
       "Resource": [
         "arn:aws:s3:::my-bucket/*"
       ],
-      "Condition": [...]
+      "Condition": [
+        // ...
+      ]
     }
   ]
 }
